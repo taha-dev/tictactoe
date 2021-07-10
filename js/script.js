@@ -124,7 +124,8 @@ function remainingMoves() {
 function randomMove() 
 {
     var temp = remainingMoves();
-    return temp[0];
+    var ind  = Math.floor(Math.random() * temp.length);
+    return temp[ind];
 }
 function computerMove() {
     if(isAi)
@@ -177,13 +178,13 @@ function minimax(gtable, player) {
         patterns.push(move);
     }
 
-    var bestMove;
+    var optimal;
     if (player === "X") {
         var expHvalue = -Infinity;
         for (var i = 0; i < patterns.length; i++) {
             if (patterns[i].hvalue > expHvalue) {
                 expHvalue = patterns[i].hvalue;
-                bestMove = i;
+                optimal = i;
             }
         }
     } else {
@@ -191,10 +192,10 @@ function minimax(gtable, player) {
         for (var i = 0; i < patterns.length; i++) {
             if (patterns[i].hvalue < expHvalue) {
                 expHvalue = patterns[i].hvalue;
-                bestMove = i;
+                optimal = i;
             }
         }
     }
 
-    return patterns[bestMove];
+    return patterns[optimal];
 }
