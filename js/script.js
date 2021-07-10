@@ -148,57 +148,6 @@ function checkTie() {
     return false;
 }
 
-// function minimax(gtable, player) {
-//     var remMoves = remainingMoves();
-//     counter++;
-//     if (checkPattern("O")) {
-//         return { score: -1 };
-//     } else if (checkPattern("X")) {
-//         return { score: 1 };
-//     } else if (remMoves.length === 0) {
-//         return { score: 0 };
-//     }
-//     var patterns = [];
-//     for (var i = 0; i < remMoves.length; i++) {
-//         var move = {};
-//         move.index = gtable[remMoves[i]];
-//         gtable[remMoves[i]] = player;
-
-//         if (player == "X") {
-//             var result = minimax(gtable, "O");
-//             move.score = result.score;
-//         } else {
-//             var result = minimax(gtable, "X");
-//             move.score = result.score;
-//         }
-
-//         gtable[remMoves[i]] = move.index;
-
-//        patterns.push(move);
-//     }
-
-//     var bestMove;
-//     if (player === "X") {
-//         var bestScore = -Infinity;
-//         for (var i = 0; i < patterns.length; i++) {
-//             if (patterns[i].score > bestScore) {
-//                 bestScore = patterns[i].score;
-//                 bestMove = i;
-//             }
-//         }
-//     } else {
-//         var bestScore = Infinity;
-//         for (var i = 0; i < patterns.length; i++) {
-//             if (patterns[i].score < bestScore) {
-//                 bestScore = patterns[i].score;
-//                 bestMove = i;
-//             }
-//         }
-//     }
-
-//     return patterns[bestMove];
-// }
-
 function minimax(gtable, player) {
     var remMoves = remainingMoves();
     counter++;
