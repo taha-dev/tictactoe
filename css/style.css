@@ -1,0 +1,61 @@
+.mynav
+{
+    border-radius: 0;
+    color: whitesmoke;
+}
+.mynav img
+{
+    margin-top: -5px;
+}
+.rp_btn
+{
+    margin-top: 10px;
+}
+.footer_container
+{
+    margin-top: 20px;
+    padding: 0;
+    bottom: 0;
+}
+.footer {
+    padding-top: 10px;
+   color: white;
+   text-align: center;
+}
+.gametable
+{
+    font-size: 80px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.gametable tr td
+{
+    height: 150px;
+    width: 150px;
+    padding: 5px;
+    cursor: pointer;
+    color: orange;
+}
+.gametable tr td:nth-child(even)
+{
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+.gametable tr:nth-child(even)
+{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.game_options
+{
+    text-align: center;
+}
+.game_options img
+{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 22px 0 rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}

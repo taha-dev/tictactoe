@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TIC TAC TOE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/site_ic.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        function setOpp(opp) {
+            localStorage.setItem('Opponent', opp);
+            window.location = "home.html";
+            }
+    </script>
+</head>
+<body class="home_page">
+    <nav class="navbar navbar-inverse mynav">
+        <div class="container-fluid">
+            <div class="navbar-header"><a href="#" class="navbar-brand"><img src="images/game_logo.png"></a></div>
+        </div>
+    </nav>
+<div class="container game_options">
+    <div class="col-sm-12">
+        <h1>Choose Your Opponent</h1>
+    </div>
+    <div class="col-sm-6">
+        <h3>Computer</h3>
+        <img src="images/pc.jpg" onclick="setOpp(false);">
+    </div>
+    <div class="col-sm-6">
+        <h3>Artificial Intelligence</h3>
+        <img src="images/ai_img.jpg" onclick="setOpp(true);">
+    </div>
+</div>
+<footer class="navbar-default navbar-fixed-bottom navbar-inverse">
+    <div class="container-fluid footer">
+        <p>Copyright 2021 © <b>AW</b> All rights reserved.</p>
+    </div>
+</footer>
+</div>
+</body>
+</html>
